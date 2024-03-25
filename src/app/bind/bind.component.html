@@ -1,0 +1,21 @@
+<p>bind works!</p>
+<img [src]="imagePath" width="100px" />
+<h1>{{name}}</h1>
+
+<button (click)="func1()">Function 1</button>
+<input type="text" [(ngModel)]="name" />
+<p>{{person | json}}</p>
+<p>{{person.name | uppercase}}</p>
+<p>{{person.name | lowercase}}</p>
+<p>{{person.name | titlecase}}</p>
+<p>{{person.name | slice:2}}</p>
+<p>{{person.name | slice:2:6}}</p>
+
+<p>age : {{person.age | json}}</p>
+<h1>{{mydate | date}}</h1>
+<h1>{{mydate | date:'short'}}</h1>
+<h1>{{mydate | date:'shortDate'}}</h1>
+<h1>{{mydate | date:'shortTime'}}</h1>
+<h1>{{mydate | date:'medium'}}</h1>
+<h1>{{mydate | date:'y/m/d'}}</h1>
+<h1>{{mydate | date:'M/d/y'}}</h1>

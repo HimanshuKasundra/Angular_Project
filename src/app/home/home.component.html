@@ -1,0 +1,39 @@
+<!-- <table border="1">
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Education</th>
+        <th>Experience</th>
+        <th>WorkingSince</th>
+    </tr>
+    <tr *ngFor="let fac of faculties">
+        <td><img [src]="fac.FacultyImage" width="100px" /></td>
+        <td>{{fac.FacultyName}}</td>
+        <td>{{fac.FacultyDesignation}}</td>
+        <td>{{fac.FacultyEducationQualification}}</td>
+        <td>{{fac.FacultyExperience}}</td>
+        <td>{{fac.FacultyWorkingSince}}</td>
+
+    </tr>
+
+</table> -->
+
+<div class="row">
+    <div class="col-md-4" *ngFor="let fac of faculties">
+        <div class="card mb-3">
+            <!-- <img [src]="fac.FacultyImage" class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h5 class="card-title">{{fac.FacultyName}}</h5>
+                <p class="card-text"><strong>Designation:</strong>
+                    {{fac.FacultyDesignation}}</p>
+                <p class="card-text"><strong>Education:</strong>
+                    {{fac.FacultyEducationQualification}}</p>
+                <p class="card-text"><strong>Experience:</strong>
+                    {{fac.FacultyExperience}}</p>
+                <p class="card-text"><strong>Working Since:</strong>
+                    {{fac.FacultyWorkingSince}}</p>
+            </div>
+        </div>
+    </div>
+</div>
