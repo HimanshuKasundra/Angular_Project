@@ -1,4 +1,4 @@
 export class Faculty {
     name: string = '';
-    age: string = ''; 
+    age: Number = 0; 
 }

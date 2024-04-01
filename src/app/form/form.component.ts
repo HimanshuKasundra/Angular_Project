@@ -17,15 +17,22 @@ export class FormComponent  {
   idToEdit = -1;
 
   insert() {
+    const formData = this.myForm.value;
+
     if (this.idToEdit == -1) {
-      if (this.myForm.valid) {
-        const formData = <Faculty>this.myForm.value;
-        this.faculties.push(formData);
-      }
+        const faculty: Faculty = {
+          name:formData.name as string,
+          age: formData.age !== null && formData.age !== undefined ? parseInt(formData.age) : 0
+        };
+        this.faculties.push(faculty);
     }
     else {
-      const formData = <Faculty>this.myForm.value;
-      this.faculties[this.idToEdit] = formData;
+      const formData = this.myForm.value;
+      const faculty: Faculty = {
+          name:formData.name as string,
+          age: formData.age !== null && formData.age !== undefined ? parseInt(formData.age) : 0
+      };
+      this.faculties[this.idToEdit] = faculty;
       this.idToEdit = -1;
     }
       this.myForm.reset();
@@ -40,6 +47,6 @@ export class FormComponent  {
   editTheValue(i: any) {
     this.idToEdit=i
     this.myForm.controls.name.setValue(this.faculties[i].name);
-    this.myForm.controls.age.setValue(this.faculties[i].age);
+    this.myForm.controls.age.setValue(this.faculties[i].age.toString());
   }
 }

@@ -11,6 +11,11 @@ import { BindComponent } from './bind/bind.component';
 import { FormComponent } from './form/form.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { StudentComponent } from './student/student.component';
+import { StudentAddComponent } from './student-add/student-add.component';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -21,13 +26,17 @@ import { FooterComponent } from './footer/footer.component';
     BindComponent,
     FormComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    StudentComponent,
+    StudentDetailComponent,
+    StudentAddComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
